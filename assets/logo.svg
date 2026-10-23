@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bevelBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f6f6a"/>
+      <stop offset="100%" stop-color="#0b0f14"/>
+    </linearGradient>
+    <linearGradient id="bevelTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8ef0d2"/>
+      <stop offset="100%" stop-color="#2f6f6a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background square -->
+  <rect x="0" y="0" width="256" height="256" fill="#0b0f14"/>
+
+  <!-- subtle off-center framing crop lines (industrial ticks) -->
+  <polyline points="14,48 14,14 48,14" fill="none" stroke="#2f6f6a" stroke-width="2"/>
+  <polyline points="242,208 242,242 208,242" fill="none" stroke="#2f6f6a" stroke-width="2"/>
+  <line x1="14" y1="226" x2="14" y2="242" stroke="#2f6f6a" stroke-width="2"/>
+  <line x1="242" y1="14" x2="242" y2="30" stroke="#2f6f6a" stroke-width="2"/>
+
+  <!-- fracture gap in shackle (background-ish notch) -->
+  <path d="M96 96 L104 84 L112 96 Z" fill="#0b0f14"/>
+
+  <!-- padlock shackle as fractured circuit trace (left side) -->
+  <path d="M116 100
+           L116 74
+           C116 54 132 40 152 40
+           C168 40 180 50 184 64
+           L184 72"
+        fill="none" stroke="url(#bevelTop)" stroke-width="10" stroke-linecap="square"/>
+
+  <!-- right shackle segment with fracture break (offset, shifted) -->
+  <path d="M126 100
+           L126 78
+           C126 64 138 54 152 54
+           C164 54 172 62 174 72
+           L174 78"
+        fill="none" stroke="#8ef0d2" stroke-width="4" stroke-linecap="square" opacity="0.85"/>
+
+  <!-- circuit node dots on shackle -->
+  <circle cx="184" cy="72" r="3.5" fill="#8ef0d2"/>
+  <circle cx="116" cy="74" r="3.5" fill="#d7e3ea"/>
+  <circle cx="152" cy="54" r="2.5" fill="#2f6f6a"/>
+
+  <!-- small fracture trace stubs (fractured circuit) -->
+  <polyline points="104,88 96,80 88,84" fill="none" stroke="#2f6f6a" stroke-width="2.5"/>
+  <polyline points="192,80 200,88 208,84" fill="none" stroke="#2f6f6a" stroke-width="2.5"/>
+  <circle cx="88" cy="84" r="2" fill="#8ef0d2"/>
+  <circle cx="208" cy="84" r="2" fill="#8ef0d2"/>
+
+  <!-- padlock body: off-center, slightly rotated feel via asymmetric path -->
+  <path d="M74 112
+           L186 108
+           L192 206
+           L80 210 Z"
+        fill="url(#bevelBody)" stroke="#2f6f6a" stroke-width="2"/>
+
+  <!-- bevel top edge highlight -->
+  <path d="M74 112 L186 108 L188 118 L76 122 Z"
+        fill="#8ef0d2" opacity="0.35"/>
+
+  <!-- keyhole as precise technical glyph (square + stem, not round) -->
+  <rect x="122" y="144" width="16" height="16" fill="#0b0f14"/>
+  <polygon points="126,160 134,160 130,178 126,178" fill="#0b0f14"/>
+  <rect x="122" y="144" width="16" height="4" fill="#8ef0d2" opacity="0.6"/>
+  <line x1="122" y1="148" x2="122" y2="160" stroke="#2f6f6a" stroke-width="1.5"/>
+  <line x1="138" y1="148" x2="138" y2="160" stroke="#2f6f6a" stroke-width="1.5"/>
+
+  <!-- micro industrial detail: corner screws / rivets -->
+  <circle cx="88" cy="124" r="3" fill="#2f6f6a"/>
+  <circle cx="176" cy="120" r="3" fill="#2f6f6a"/>
+  <circle cx="92" cy="198" r="3" fill="#2f6f6a"/>
+  <circle cx="180" cy="194" r="3" fill="#2f6f6a"/>
+
+  <!-- fracture line continuing on body (half fractures) -->
+  <polyline points="140,112 146,132 152,140" fill="none" stroke="#d7e3ea" stroke-width="1.5" opacity="0.7"/>
+  <polyline points="146,132 142,144" fill="none" stroke="#8ef0d2" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- wordmark small, bottom right -->
+  <text x="196" y="238" font-family="monospace" font-size="10" fill="#2f6f6a" text-anchor="end" letter-spacing="2">HATARO</text>
+</svg>
